@@ -5,6 +5,8 @@
     <title>Cait Friedlander</title>
     <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/main.css">
+    <script src='js/caitController.js'></script>
+
   </head>
   <body class="container">
     <header>
@@ -19,8 +21,11 @@
 
     </div>
 
-    <div ng-controller="CaitController as vm" class="about">
-
+    <div ng-controller="CaitController as cait" class="about">
+      <h3>About</h3>
+      <h4>{{cait.name}}</h4>
+      <p>{{cait.about}}</p>
+      <img src={{cait.photo}}>
     </div>
 
     <div class="contact">
@@ -29,7 +34,7 @@
 
     <script src="/js/angular.min.js"></script>
     <script src="/js/app.js"></script>
-    <script src="/js/controller.js"></script>
+    <script src="/js/caitController.js"></script>
 
   </body>
 </html>
